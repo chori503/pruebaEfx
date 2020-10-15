@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="card mt-5">
+			<div class="card-body">
+				<h3 class="card-title">CHALLENGE EFX!</h3>
+				<p class="card-text">Esta es una prueba con la cual se valorara
+					para la posicion de programador java</p>
+				<table class="table table-stripped">
+					<thead>
+						<tr>
+							<th>Puntos</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1. CREAR UN SCRIPT CON 3 TABLAS, UNA LLAMADA CLIENTES,
+								CONTENIENDO LOS SIGUIENTES CAMPOS: IdCliente, NombreCliente,
+								FechaCreacion y Estado. LA OTRA TABLA LLAMADA PRODUCTOS, CON LOS
+								SIGUIENTES CAMPOS: IdProducto, NombreProducto, FechaCreacion y
+								Estado. ( LOS TIPOS DE LOS CAMPOS QUEDAN A SU CONSIDERACIÓN.
+								ADEMÁS, LA TERCERA TABLA DEBE SER LA TABLA DE RELACIÓN ENTRE
+								CLIENTES Y PRODUCTOS. USTED ELIGE EL NOMBRE Y SUS CAMPOS
+								RESPECTIVOS).</td>
+						</tr>
+						<tr>
+							<td>2. SOLVENTAR LOS PROBLEMAS EN EL ARCHIVO POM DEL
+								PROYECTO (SE PERMITE AGREGAR O MODIFICAR, PERO NO ELIMINAR NI
+								COMENTAR CUALQUIER DEPENDENCIA).</td>
+						</tr>
+						<tr>
+							<td>3. CARGAR AL INICIAR LA APLICACIÓN EL ARCHIVO DE
+								PROPERTIES LLAMADO “challenge-dev.properties” QUE DEBERÁ ESTAR
+								UBICADO EN “resources/properties/” (CREAR DICHO ARCHIVO CON LAS
+								PROPIEDADES NECESARIAS PARA EL FUNCIONAMIENTO DE LA APLICACIÓN).
+
+							</td>
+						</tr>
+						<tr>
+							<td>4. REALIZAR LA CONFIGURACIÓN NECESARIA PARA LA BASE DE
+								DATOS EN EL ARCHIVO DBConf QUE YA EXISTE EN EL PROYECTO</td>
+						</tr>
+						<tr>
+							<td>5. REPARAR LA QUERY QUE SE ENCUENTRA EN EL ARCHIVO
+								hqlQuerys.xml DEL PROYECTO, PARA QUE SEA FUNCIONAL EN LA
+								BÚSQUEDA DE PRODUCTOS ACTIVOS DE UN CLIENTE ESPECÍFICO. DEBE
+								CONSERVAR EL PASO DE PARÁMETROS DEL ID DE CLIENTE Y ESTADO DEL
+								PRODUCTO</td>
+						</tr>
+						<tr>
+							<td>6. HACER QUE EL MÉTODO findAllActiveProdByCliente EN LA
+								CLASE ProductoDaoImpl RETORNE LA LISTA DE PRODUCTOS DEL CLIENTE
+								ESPECIFICADO</td>
+						</tr>
+						<tr>
+							<td>7. AGREGAR UN TEXTO INFORMATIVO AL index.html Y QUE SE
+								MUESTRE AL CARGAR LA APLICACIÓN. DEBERÁ CONFIGURAR EN LA CLASE
+								SecurityConf LO NECESARIO PARA QUE SPRING SECURITY EVITE QUE SE
+								PUEDA ACCEDER A OTRA DIRECCIÓN QUE NO SEA EL INDEX EN EL PATH
+								“/”.</td>
+						</tr>
+						<tr>
+							<td>8. LA APLICACIÓN DEBE PODER EJECUTARSE EN TOMCAT
+								STANDALONE Y NO EN EL EMBED QUE TRAE POR DEFECTO SPRING BOOT.</td>
+						</tr>
+						<tr>
+							<td>9. ACTUALIZAR SPRING BOOT A LA VERSIÓN 2.2.4 Y REALIZAR
+								LOS CAMBIOS NECESARIOS PARA QUE FUNCIONE CON OPENJDK 14.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+</body>
+</html>
