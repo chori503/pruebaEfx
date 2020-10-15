@@ -1,10 +1,15 @@
 package com.equifax.dev.model.dao;
 
-import com.equifax.dev.utils.DaoUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.equifax.dev.model.entity.ClienteProducto;
+import com.equifax.dev.model.entity.Productos;
+import com.equifax.dev.utils.DaoUtils;
 
 @Component
 public class ProductoDaoImpl extends GeneralDao implements ProductoDao {
@@ -13,12 +18,19 @@ public class ProductoDaoImpl extends GeneralDao implements ProductoDao {
 	DaoUtils eUtils;
 
 	@SuppressWarnings("unchecked")
-	public List<Object> findAllActiveProdByCliente(Long cliId) {
+	public List<Productos> findAllActiveProdByCliente(Long cliId) {
 		String hqlQuery = eUtils.getQByName("pdoCte.getAllActivesByCteId");
-		String active = "1";
+		boolean active=true;
 		try {
-			List<Object> list = (List<Object>) findByHQuery(hqlQuery, new Object[]{cliId, active});
-			return list;
+			List<ClienteProducto> list = (List<ClienteProducto>) findByHQuery(hqlQuery, new Object[] { cliId, active });
+			Productos prod;
+			List<Productos> prodList = new ArrayList<Productos>();
+			for (ClienteProducto cp : list) {
+				prod = new Productos(cp.getIdProducto().getIdProducto(), cp.getIdProducto().getNombreProducto(),
+						cp.getIdProducto().getFechaCreacion(), cp.getIdProducto().getEstado());
+			prodList.add(prod);
+			}
+			return prodList;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
